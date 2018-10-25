@@ -1,0 +1,5 @@
+$(OBJ_DIR)$Snqueens.$O: $(EX)
+	$(CCC) $(CFLAGS) -c $(EX) $(OBJ_OUT)$(OBJ_DIR)$S$(basename $(notdir $(EX))).$O
+
+$(BIN_DIR)/nqueens$E: $(OR_TOOLS_LIBS) $(OBJ_DIR)$Snqueens.$O
+	$(CCC) $(CFLAGS) $(OBJ_DIR)$Snqueens.$O $(OR_TOOLS_LNK) $(OR_TOOLS_LD_FLAGS) $(EXE_OUT)$(BIN_DIR)$Snqueens$E
